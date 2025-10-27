@@ -105,16 +105,16 @@ const yes2 = document.getElementById("yes2");
 const no2 = document.getElementById("no2");
 const disDiv = document.getElementById("dis");
 
-// Function to calculate total
+
 function calculateTotal(price, quantity, taxRate, discount = 0) {
     let totalCost = (price * quantity) * (1 + taxRate);
     if (discount > 0) {
-        totalCost -= discount; // subtract discount
+        totalCost -= discount; 
     }
     return totalCost.toFixed(2);
 }
 
-// Show discount input if “Yes” clicked
+
 yes2.addEventListener("click", function () {
     disDiv.innerHTML = `
       <input type="number" id="discountInput" placeholder="Enter discount amount">
